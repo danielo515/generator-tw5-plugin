@@ -69,7 +69,7 @@ module.exports = Generator.Base.extend({
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the sweet ' + chalk.red('generator-tiddlywiki-plugin') + ' generator!'
+      'Welcome to the sweet ' + chalk.red('generator-tw5-plugin') + ' generator!'
     ));
 
     var prompts = [{
