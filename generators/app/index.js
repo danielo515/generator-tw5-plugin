@@ -10,6 +10,7 @@ const {
   execSync: exec
 } = require(`child_process`);
 
+const mkdir = require(`mkdirp`);
 
 var chalk = require('chalk');
 var yosay = require('yosay');
@@ -24,28 +25,23 @@ module.exports = Generator.Base.extend({
   },
 
   _camelCase(name) {
-
     return name.split(`-`).map((s, i) => {
-      if (i === 0) return s;
+      if (i === 0) {return s;}
       return this._ucFirst(s);
     }).join(``);
-
   },
   _spawn(cmd) {
-
     const parts = cmd.split(` `);
     const [first, ...rest] = parts;
 
-    spawn(first, rest, { stdio: `inherit` });
-
+    spawn(first, rest, {stdio: `inherit`});
   },
 
   _copyFile(f) {
-
     let from = f;
     let to = f;
 
-    if (isPlainObject(f)) ({ from, to } = f);
+    if (isPlainObject(f)) {({ from, to } = f);}
 
     this.fs.copyTpl(
       this.templatePath(from),
@@ -55,15 +51,12 @@ module.exports = Generator.Base.extend({
         interpolate: /<%=([\s\S]+?)%>/g
       }
     );
-
   },
 
   _createDir(d) {
-
     mkdir(d, e => {
-      if (e) console.error(e);
+      if (e) {console.error(e);}
     });
-
   },
 
   prompting() {

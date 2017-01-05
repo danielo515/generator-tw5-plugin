@@ -1,7 +1,7 @@
 {
   "name": "<%= plugin %>",
   "version": "0.0.1",
-  "author": "<%= authorName %> <<%= email%>>",
+  "author": "<%= author %> <<%= email%>>",
   "description": "<%= pluginDescription %>",
   "license": "<%= license %>",
   "private": true,
