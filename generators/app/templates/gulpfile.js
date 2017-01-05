@@ -52,7 +52,7 @@
 /**** Script config ************************************************/
 
 // the author and pluginname; lowercase letters and no spaces!
-const authorName = '<%= author %>';
+const authorName = '<%= github %>';
 const pluginName = '<%= plugin %>';
 
 // whether or not to create/increment the build number automatically

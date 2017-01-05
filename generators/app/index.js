@@ -192,6 +192,8 @@ module.exports = Generator.extend({
 
   install() {
     // this.installDependencies();
+    this.config.set('plugin', this.props.plugin);
+    this.config.set('github', this.props.github);
     this.log('Wow, let\'s install stuff');
   }
 });
