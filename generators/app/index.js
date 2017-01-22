@@ -66,7 +66,8 @@ module.exports = Generator.extend({
   initializing() {
     this.props = {
       license: `MIT`,
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
+      version: '0.1.0'
     };
   },
 
@@ -174,7 +175,11 @@ module.exports = Generator.extend({
 
     const ci = [
       `.travis.yml`,
-      `gulpfile.js`
+      `gulpfile.babel.js`
+    ];
+
+    const plugin = [
+      {from: `plugin.info`, to: `src/plugins/${this.props.github}/${this.props.plugin}/plugin.info`}
     ];
 
     let files = [
@@ -184,6 +189,7 @@ module.exports = Generator.extend({
       ...babel,
       ...editor,
       ...npm,
+      ...plugin,
       ...ci
     ];
 
@@ -192,8 +198,12 @@ module.exports = Generator.extend({
 
   install() {
     // this.installDependencies();
-    this.config.set('plugin', this.props.plugin);
-    this.config.set('github', this.props.github);
+    // this.config.set('plugin', this.props.plugin);
+    // this.config.set('pluginDescription', this.props.pluginDescription);
+    this.config.defaults({
+      plugin: this.props.plugin,
+      pluginDescription: this.props.pluginDescription
+    });
     this.log('Wow, let\'s install stuff');
   }
 });
