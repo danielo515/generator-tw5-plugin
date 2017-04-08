@@ -1,0 +1,30 @@
+[
+  {
+    "name": "centralised",
+    "value": "tiddlywiki/centralised"
+  },
+  {
+    "name": "readonly",
+    "value": "tiddlywiki/readonly"
+  },
+  {
+    "name": "seamless",
+    "value": "tiddlywiki/seamless"
+  },
+  {
+    "name": "snowwhite",
+    "value": "tiddlywiki/snowwhite"
+  },
+  {
+    "name": "starlight",
+    "value": "tiddlywiki/starlight"
+  },
+  {
+    "name": "tight",
+    "value": "tiddlywiki/tight"
+  },
+  {
+    "name": "vanilla",
+    "value": "tiddlywiki/vanilla"
+  }
+]

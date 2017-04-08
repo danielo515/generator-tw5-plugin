@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/<%= github %>/<%= plugin %>/startup/<% module %>.js
+title: $:/plugins/<%- github %>/<%- plugin %>/startup/<%- module %>.js
 type: application/javascript
 module-type: startup
 

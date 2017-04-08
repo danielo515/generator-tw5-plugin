@@ -1,0 +1,126 @@
+[
+  {
+    "name": "async",
+    "value": "tiddlywiki/async"
+  },
+  {
+    "name": "blog",
+    "value": "tiddlywiki/blog"
+  },
+  {
+    "name": "browser-sniff",
+    "value": "tiddlywiki/browser-sniff"
+  },
+  {
+    "name": "cecily",
+    "value": "tiddlywiki/cecily"
+  },
+  {
+    "name": "classictools",
+    "value": "tiddlywiki/classictools"
+  },
+  {
+    "name": "codemirror",
+    "value": "tiddlywiki/codemirror"
+  },
+  {
+    "name": "d3",
+    "value": "tiddlywiki/d3"
+  },
+  {
+    "name": "evernote",
+    "value": "tiddlywiki/evernote"
+  },
+  {
+    "name": "filesystem",
+    "value": "tiddlywiki/filesystem"
+  },
+  {
+    "name": "github-fork-ribbon",
+    "value": "tiddlywiki/github-fork-ribbon"
+  },
+  {
+    "name": "googleanalytics",
+    "value": "tiddlywiki/googleanalytics"
+  },
+  {
+    "name": "help",
+    "value": "tiddlywiki/help"
+  },
+  {
+    "name": "highlight",
+    "value": "tiddlywiki/highlight"
+  },
+  {
+    "name": "internals",
+    "value": "tiddlywiki/internals"
+  },
+  {
+    "name": "jasmine",
+    "value": "tiddlywiki/jasmine"
+  },
+  {
+    "name": "jszip",
+    "value": "tiddlywiki/jszip"
+  },
+  {
+    "name": "katex",
+    "value": "tiddlywiki/katex"
+  },
+  {
+    "name": "markdown",
+    "value": "tiddlywiki/markdown"
+  },
+  {
+    "name": "nodewebkitsaver",
+    "value": "tiddlywiki/nodewebkitsaver"
+  },
+  {
+    "name": "pluginlibrary",
+    "value": "tiddlywiki/pluginlibrary"
+  },
+  {
+    "name": "powered-by-tiddlywiki",
+    "value": "tiddlywiki/powered-by-tiddlywiki"
+  },
+  {
+    "name": "railroad",
+    "value": "tiddlywiki/railroad"
+  },
+  {
+    "name": "stacked-view",
+    "value": "tiddlywiki/stacked-view"
+  },
+  {
+    "name": "tahoelafs",
+    "value": "tiddlywiki/tahoelafs"
+  },
+  {
+    "name": "text-slicer",
+    "value": "tiddlywiki/text-slicer"
+  },
+  {
+    "name": "tiddlyweb",
+    "value": "tiddlywiki/tiddlyweb"
+  },
+  {
+    "name": "translators",
+    "value": "tiddlywiki/translators"
+  },
+  {
+    "name": "tw2parser",
+    "value": "tiddlywiki/tw2parser"
+  },
+  {
+    "name": "tw5.com-docs",
+    "value": "tiddlywiki/tw5.com-docs"
+  },
+  {
+    "name": "upgrade",
+    "value": "tiddlywiki/upgrade"
+  },
+  {
+    "name": "xmldom",
+    "value": "tiddlywiki/xmldom"
+  }
+]

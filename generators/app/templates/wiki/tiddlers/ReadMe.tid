@@ -1,0 +1,11 @@
+title: ReadMe
+
+<!--
+  This is the readme that will be used as the main readme of your repository.
+  Put any description, presentation or whatever engaging information you want here.
+  This one is different from your plugin's specific readme.
+  This is a comment, you can remove it.
+-->
+! <%- plugin %>
+
+<%- pluginDescription %>

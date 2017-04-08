@@ -1,0 +1,14 @@
+title: $:/plugins/<%- github %>/<%- plugin %>/readme
+caption: readme
+
+<!--
+  This is the readme of your plugin.
+  This tiddler will be listed as a tab inside your plugin's information card on
+  tiddlywiki's control panel.
+  Put relevant information about your plugin here.
+  This one is different from your repositori's readme.
+  This is a comment, you can remove it.
+-->
+! <%- plugin %>
+
+<%- pluginDescription %>

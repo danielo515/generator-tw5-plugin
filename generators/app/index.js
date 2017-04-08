@@ -78,6 +78,7 @@ module.exports = Generator.extend({
     ));
 
     var prompts = [
+    // ==== General metadata info ====
       {
         type: 'input',
         name: 'pluginName',
@@ -111,7 +112,7 @@ module.exports = Generator.extend({
         store: true
       },
       {
-        type: `rawlist`,
+        type: `list`,
         name: `license`,
         message: `License`,
         default: 'MIT',
@@ -131,6 +132,25 @@ module.exports = Generator.extend({
           value: `Apache-2.0`,
           name: `Apache-2.0`
         }]
+      },
+      // ==== TW5 specific =====
+      {
+        type: 'checkbox',
+        name: 'tw5Plugins',
+        message: 'Select which tiddlywiki official plugins you need',
+        choices: require('./tw5PlugisnList.json')
+      },
+      {
+        type: 'checkbox',
+        name: 'tw5Themes',
+        message: 'Select which tiddlywiki official themes you want to include',
+        choices: require('./tw5ThemesList.json')
+      },
+      {
+        type: 'checkbox',
+        name: 'tw5Languages',
+        message: 'Select which ones of tiddlywiki\'s official Languages you want to include',
+        choices: require('./tw5LanguagesList.json')
       }
     ];
 
@@ -179,7 +199,14 @@ module.exports = Generator.extend({
     ];
 
     const plugin = [
-      {from: `src/plugin.info`, to: `src/plugins/${this.props.github}/${this.props.plugin}/plugin.info`}
+        {from: `src/plugin.info`, to: `src/plugins/${this.props.github}/${this.props.plugin}/plugin.info`},
+        {from: `src/tiddlers/**.tid`, to: `src/plugins/${this.props.github}/${this.props.plugin}/tiddlers`}
+
+    ];
+
+    const wiki = [
+      'wiki/tiddlywiki.info',
+      {from: 'wiki/tiddlers/**', to: 'wiki/tiddlers'}
     ];
 
     let files = [
@@ -190,6 +217,7 @@ module.exports = Generator.extend({
       ...editor,
       ...npm,
       ...plugin,
+      ...wiki,
       ...ci
     ];
 

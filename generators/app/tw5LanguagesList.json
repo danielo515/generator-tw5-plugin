@@ -1,0 +1,90 @@
+[
+  {
+    "name": "ca-ES",
+    "value": "ca-ES"
+  },
+  {
+    "name": "cs-CZ",
+    "value": "cs-CZ"
+  },
+  {
+    "name": "da-DK",
+    "value": "da-DK"
+  },
+  {
+    "name": "de-AT",
+    "value": "de-AT"
+  },
+  {
+    "name": "de-CH",
+    "value": "de-CH"
+  },
+  {
+    "name": "de-DE",
+    "value": "de-DE"
+  },
+  {
+    "name": "el-GR",
+    "value": "el-GR"
+  },
+  {
+    "name": "es-ES",
+    "value": "es-ES"
+  },
+  {
+    "name": "fr-FR",
+    "value": "fr-FR"
+  },
+  {
+    "name": "hi-IN",
+    "value": "hi-IN"
+  },
+  {
+    "name": "ia-IA",
+    "value": "ia-IA"
+  },
+  {
+    "name": "it-IT",
+    "value": "it-IT"
+  },
+  {
+    "name": "ja-JP",
+    "value": "ja-JP"
+  },
+  {
+    "name": "ko-KR",
+    "value": "ko-KR"
+  },
+  {
+    "name": "nl-NL",
+    "value": "nl-NL"
+  },
+  {
+    "name": "pa-IN",
+    "value": "pa-IN"
+  },
+  {
+    "name": "pt-PT",
+    "value": "pt-PT"
+  },
+  {
+    "name": "ru-RU",
+    "value": "ru-RU"
+  },
+  {
+    "name": "sk-SK",
+    "value": "sk-SK"
+  },
+  {
+    "name": "sv-SE",
+    "value": "sv-SE"
+  },
+  {
+    "name": "zh-Hans",
+    "value": "zh-Hans"
+  },
+  {
+    "name": "zh-Hant",
+    "value": "zh-Hant"
+  }
+]

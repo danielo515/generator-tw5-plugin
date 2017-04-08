@@ -1,13 +1,23 @@
 language: node_js
 node_js:
-  - "4"
-  - "5"
   - "6"
-  - "7"
+branches:
+  only:
+    - master # by default we only publish changes to master branch. Change as needed
+before_script:
+- "npm i"
 script:
-  - npm run lint:test
+  - "npm run build:production"
+  - "npm run build:index"
 cache:
   yarn: true
   directories:
     - node_modules
-after_success: 'npm run coveralls'
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: wiki/output
+  target_branch: gh-pages
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: develop

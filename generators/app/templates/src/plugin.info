@@ -1,9 +1,9 @@
 {
-    "title": "$:/plugins/<%= github %>/<%= plugin %>",
-    "description": "<%= pluginDescription %>",
-    "author": "<%= author %>",
+    "title": "$:/plugins/<%- github %>/<%- plugin %>",
+    "description": "<%- pluginDescription %>",
+    "author": "<%- author %>",
     "core-version": ">=5.1.14",
     "list": "readme",
-    "version": "<%= version %>",
+    "version": "<%- version %>",
     "released": "Sat, 07 Jan 2017 12:23:41 GMT"
 }
