@@ -1,5 +1,5 @@
 # <%= pluginName %>
-pluginName is a plugin for TiddlyWiki 5. <%= pluginDescription %>
+<%= pluginName %> is a plugin for TiddlyWiki 5. <%= pluginDescription %>
 
 # Installation
 
