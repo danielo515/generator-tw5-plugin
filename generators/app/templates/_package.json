@@ -24,6 +24,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
     "babel-preset-latest": "^6.16.0",
     "beepbeep": "^1.2.0",
+    "cross-env": "^4.0.0",
     "del": "^2.0.0",
     "eslint": "^3.3.0",
     "gulp": "^3.9.1",
@@ -49,6 +50,10 @@
   "scripts": {
     "build": "gulp",
     "build:production": "gulp --production",
-    "build:index":"tiddlywiki ./wiki --verbose --build index"
+    "build:index": "cross-env TIDDLYWIKI_PLUGIN_PATH=./dist tiddlywiki ./wiki --verbose --build index",
+    "docs": "gulp 'create docs'",
+    "start": "npm run gulp-dev && cross-env TIDDLYWIKI_PLUGIN_PATH=./dist npm run tw_start",
+    "tw_start": "tiddlywiki ./wiki --verbose --server 8087 $:/core/save/all text/plain text/html '' '' 0.0.0.0",
+    "gulp-dev": "gulp dev"
   }
 }

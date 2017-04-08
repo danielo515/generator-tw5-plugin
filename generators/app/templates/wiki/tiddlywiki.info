@@ -1,7 +1,7 @@
 {
   "plugins": <%- JSON.stringify(tw5Plugins,null,4)  %>,
   "themes": <%- JSON.stringify(tw5Themes,null,4)  %>,
-  "languages": <%- JSON.stringify(tw5Languages,null,4)  %>,,
+  "languages": <%- JSON.stringify(tw5Languages,null,4)  %>,
   "build": {
     "index": [
       "--rendertiddler","$:/core/save/all","index.html","text/plain"
@@ -9,7 +9,7 @@
     "favicon": [
       "--savetiddler","$:/favicon.ico","favicon.ico"],
     "readme": [
-      "--rendertiddler","$:/plugins/<%- github %>/<%- plugin %>/readme","plugin.md","text/html"
+      "--rendertiddler","$:/plugins/<%- github %>/<%- plugin %>/readme","plugin.md","text/html",
       "--rendertiddler","ReadMe","readme.md","text/html"
       ]
   }

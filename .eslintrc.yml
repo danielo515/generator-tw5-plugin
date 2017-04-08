@@ -9,7 +9,6 @@ parserOptions:
     ecmaVersion: 6
     sourceType: module
     ecmaFeatures:
-        jsx: true
         spread: true
         experimentalObjectRestSpread: true
 
@@ -19,12 +18,15 @@ globals:
   node: true
   browser: true
   $tw: true
-  $tm: true
 
 rules:
     semi: 1 # require semicolons
-    no-unused-vars: 0
+    no-unused-vars: 1
     quotes: [ 1, 'single' ]
-    indent: [ 1, 2 ] # 2-space indentation
+    indent: [ 1, 4 ] # 4-space indentation
     keyword-spacing: 1 # space before and after
     array-bracket-spacing: [1, 'always']  # enforce spaces inside of brackets
+    no-unreachable: 2
+    no-else-return: 1
+    strict: 1
+    no-shadow: 1

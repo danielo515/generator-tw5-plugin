@@ -1,9 +1,10 @@
 /*\
-title: $:/plugins/<%- github %>/<%- plugin %>/startup/<%- module %>.js
+title: $:/plugins/<%- github %>/<%- plugin %>/startup/<%- startupModuleName %>.js
 type: application/javascript
 module-type: startup
 
-<%= description %>
+This is an startup module. Please put here a comment about what it does and why.
+For more info just visit:  http://tiddlywiki.com/dev/#StartupMechanism
 
 @preserve
 
@@ -12,10 +13,10 @@ module-type: startup
 
 /*jslint node: true, browser: true */
 /*global $tw: false */
-'use strict';
+
 
 // Export name and synchronous status
-exports.name = '<%= plugin %>-<%= module %>';
+exports.name = '<%- plugin %>-<%- startupModuleName %>';
 /*
 You MUST export at least one startup order, so uncomment at least one
 Usually you want to run your module after the startup module
