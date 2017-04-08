@@ -179,7 +179,7 @@ module.exports = Generator.extend({
     ];
 
     const plugin = [
-      {from: `plugin.info`, to: `src/plugins/${this.props.github}/${this.props.plugin}/plugin.info`}
+      {from: `src/plugin.info`, to: `src/plugins/${this.props.github}/${this.props.plugin}/plugin.info`}
     ];
 
     let files = [
