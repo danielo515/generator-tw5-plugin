@@ -9,7 +9,9 @@
 const fs = require( 'fs' );
 const GenerateList = require( './list-tw5-plugins' );
 
+const languages = GenerateList( 'languages' ).concat( { name: 'en-GB', value: 'en-GB' } );
+
 fs.writeFileSync( './generators/app/tw5PlugisnList.json', JSON.stringify( GenerateList(), null, 2 ) );
 fs.writeFileSync( './generators/app/tw5ThemesList.json', JSON.stringify( GenerateList('themes'), null, 2 ) );
-fs.writeFileSync( './generators/app/tw5LanguagesList.json', JSON.stringify( GenerateList('languages'), null, 2 ) );
+fs.writeFileSync( './generators/app/tw5LanguagesList.json', JSON.stringify( languages , null, 2 ) );
 process.exit(0);

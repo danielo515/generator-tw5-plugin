@@ -159,7 +159,7 @@ module.exports = Generator.extend({
             }, {
                 type: 'checkbox',
                 name: 'tw5Languages',
-                default: [ 'es-ES' ],
+                default: [ 'en-GB' ],
                 message: 'Select which ones of tiddlywiki\'s official Languages you want to include',
                 choices: require('./tw5LanguagesList.json')
             }, {
@@ -281,7 +281,7 @@ module.exports = Generator.extend({
     },
 
     install() {
-        // this.installDependencies(); this.config.set('plugin', this.props.plugin);
+        this.installDependencies();
         // this.config.set('pluginDescription', this.props.pluginDescription);
         this
             .config

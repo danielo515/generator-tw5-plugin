@@ -1,6 +1,9 @@
 # generator-tw5-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Create new plugins for tiddlywiki 5 easily
 
+The hardest part for me when I started programming plugins for tiddlywiki was generating an appropriate project.
+Hope this generator saves you all the headache and confusion I suffered at the beginning.
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-tw5-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
