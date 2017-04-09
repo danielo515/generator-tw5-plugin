@@ -1,6 +1,6 @@
 var Generator = require('yeoman-generator');
 
-const {isPlainObject} = require('lodash');
+const {isPlainObject, kebabCase, camelCase } = require('lodash');
 const fs = require('fs');
 const Path = require('path');
 
@@ -106,13 +106,13 @@ module.exports = Generator.extend({
                 type: 'input',
                 name: 'author',
                 message: 'Who is the author (complete name)',
-                default: 'Mr Anonymous',
+                default: this.user.git.name(),
                 store: true
             }, {
                 type: 'input',
                 name: 'email',
                 message: 'Author\'s name',
-                default: 'yo@gmail.com',
+                default: this.user.git.email(),
                 store: true
             }, {
                 type: 'input',
@@ -147,6 +147,7 @@ module.exports = Generator.extend({
             {
                 type: 'checkbox',
                 name: 'tw5Plugins',
+                default: [ 'tiddlywiki/tiddlyweb','tiddlywiki/filesystem' ],
                 message: 'Select which tiddlywiki official plugins you need',
                 choices: require('./tw5PlugisnList.json')
             }, {
@@ -174,7 +175,8 @@ module.exports = Generator.extend({
         return this
             .prompt(prompts)
             .then(props => {
-                if (props.components.length) {
+                if ( props.components.length ) {
+                    // If there are javascript components selected let's build some extra questions about them
                     const componentPrompts = props
                         .components
                         .map( f => {
@@ -182,7 +184,8 @@ module.exports = Generator.extend({
                             return {
                                 type: 'input',
                                 message: `Please name the following module: ${name}`,
-                                name: `${this._camelCase(name)}Name`
+                                name: `${camelCase( name )}`,
+                                filter: value => ({ name: kebabCase(value), camel: camelCase(value)})
                             }; } );
                     return this.prompt(componentPrompts).then( moreProps => Object.assign(props, moreProps));
                 }
@@ -191,9 +194,7 @@ module.exports = Generator.extend({
             .then(props => {
                 // To access props later use this.props.someAnswer;
                 this.props = Object.assign(this.props, props);
-                this.props.plugin = props
-                    .pluginName
-                    .toLowerCase();
+                this.props.plugin = kebabCase( props.pluginName );
                 // Make sure to include the generated plugin into the list of generated plugins!
                 this.props.tw5Plugins.push( `${this.props.github}/${this.props.plugin}` );
             });
@@ -235,10 +236,11 @@ module.exports = Generator.extend({
             }
         ];
 
-        const ci = [ '.travis.yml', 'gulpfile.babel.js' ];
+        const ci = [ '.travis.yml', 'gulpfile.babel.js' , 'nodemon.json' ];
 
         const plugin = [
             'src/jsdoc/config.json',
+            'src/jsdoc/README.md',
             {
                 from: 'src/plugin.info',
                 to: `src/plugins/${this.props.github}/${this.props.plugin}/plugin.info`
@@ -246,6 +248,7 @@ module.exports = Generator.extend({
                 from: 'src/tiddlers/**.tid',
                 to: `src/plugins/${this.props.github}/${this.props.plugin}/tiddlers`
             },
+            // Include any selected javascript components
             ...this
                 .props
                 .components

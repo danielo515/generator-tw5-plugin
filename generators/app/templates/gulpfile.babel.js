@@ -315,7 +315,6 @@ gulp.task('dev', (cb) => {
     runSequence(
     'Javascript validation',
     'perform cleanup',
-    'bump version',
         [
             'copy vanilla files',
             'compile and move styles',
@@ -324,4 +323,11 @@ gulp.task('dev', (cb) => {
     cb
   );
 
+});
+
+// Watch Files For Changes
+gulp.task('watch', function () {
+    gulp.watch( pluginSrc + '/**/*.js' , [ 'dev' ] );
+    gulp.watch( pluginSrc + '/**/*.tid' , [ 'dev' ] );
+    gulp.watch( pluginSrc + '/**/*.scss' , [ 'dev' ] );
 });

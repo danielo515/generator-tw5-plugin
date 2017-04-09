@@ -3,9 +3,9 @@ node_js:
   - "6"
 branches:
   only:
-    - master # by default we only publish changes to master branch. Change as needed
+    - master # only fire build if changes are detected at master. Change as needed
 before_script:
-- "npm i"
+  - "npm i"
 script:
   - "npm run build:production"
   - "npm run build:index"
@@ -20,4 +20,4 @@ deploy:
   target_branch: gh-pages
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
-    branch: develop
+    branch: master

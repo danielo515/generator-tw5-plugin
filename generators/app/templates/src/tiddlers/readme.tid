@@ -9,6 +9,6 @@ caption: readme
   This one is different from your repositori's readme.
   This is a comment, you can remove it.
 -->
-! <%- plugin %>
+! <%- pluginName %>
 
 <%- pluginDescription %>

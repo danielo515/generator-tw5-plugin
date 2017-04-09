@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/<%- github %>/<%- plugin %>/startup/<%- startupModuleName %>.js
+title: $:/plugins/<%- github %>/<%- plugin %>/startup/<%- startupModule.name %>.js
 type: application/javascript
 module-type: startup
 
@@ -16,14 +16,14 @@ For more info just visit:  http://tiddlywiki.com/dev/#StartupMechanism
 
 
 // Export name and synchronous status
-exports.name = '<%- plugin %>-<%- startupModuleName %>';
+exports.name = '<%- plugin %>-<%- startupModule.name %>';
 /*
 You MUST export at least one startup order, so uncomment at least one
 Usually you want to run your module after the startup module
 but that varies depending on your intentions. choose wisely...
-exports.before = ["startup"];
-exports.after = ["startup"];
 */
+// exports.before = ["startup"];
+exports.after = [ 'startup' ];
 // Allowed options are browser, node or both
 exports.platforms = [ 'browser' ];
 // If you are doing asyncrhonous tasks change this to false
@@ -36,4 +36,5 @@ exports.synchronous = true;
  */
 exports.startup = function () {
   // Put your startup logic here!
+    console.log( '<%- plugin %> has executed one startup module!!!' );
 };

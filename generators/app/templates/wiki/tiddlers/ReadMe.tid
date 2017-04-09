@@ -6,6 +6,6 @@ title: ReadMe
   This one is different from your plugin's specific readme.
   This is a comment, you can remove it.
 -->
-! <%- plugin %>
+! <%- pluginName %>
 
 <%- pluginDescription %>

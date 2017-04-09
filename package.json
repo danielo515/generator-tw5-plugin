@@ -2,7 +2,7 @@
   "name": "generator-tw5-plugin",
   "version": "0.0.1",
   "description": "Create new plugins for tiddlywiki 5 easily",
-  "homepage": "https://danielo515.github.com/yeoman-generator-tw5-plugin",
+  "homepage": "https://github.com/danielo515/generator-tw5-plugin",
   "author": {
     "name": "Danielo Rodriguez Rivero",
     "email": "rdanielo@gmail.com",
