@@ -154,12 +154,14 @@ module.exports = Generator.extend({
                 type: 'checkbox',
                 name: 'tw5Themes',
                 default: [ 'tiddlywiki/vanilla' ],
+                store: true,
                 message: 'Select which tiddlywiki official themes you want to include',
                 choices: require('./tw5ThemesList.json')
             }, {
                 type: 'checkbox',
                 name: 'tw5Languages',
                 default: [ 'en-GB' ],
+                store: true,
                 message: 'Select which ones of tiddlywiki\'s official Languages you want to include',
                 choices: require('./tw5LanguagesList.json')
             }, {
