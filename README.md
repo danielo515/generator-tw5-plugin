@@ -47,7 +47,7 @@ To run an npm script just execute `npm run scriptName`. The following npm script
 
 * `build`: Generates a non minified version of the plugin on the dist folder and bundles the plugin
 * `build:production`: Same as `build` but with code minification
-* `build:index"`: Creates a tiddlywiki file containing your plugin and your presentation tiddlers. Useful for publishing.
+* `build:index`: Creates a tiddlywiki file containing your plugin and your presentation tiddlers. Useful for publishing.
 * `docs`: Generates documentation from your plugin's Javascript code using JsDocs
 * `start`: Starts a tiddlywiki server at http://localhost:8080. Useful for testing your project before publishing, or generating the demo tiddlers. You can run this script directly just by doing `npm start`.
 
@@ -67,7 +67,7 @@ The generated project includes a `.travis.yml` file for automatic publishing to 
 All you have to do is enable `travis` on your repository.
 To be able to publish to github pagesyou need to configure an environment variable
 named `GITHUB_TOKEN` containinng a github token with on your `travis-ci` dashboard.
-Instructions about generating the token [are here](https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token), and (how to setup the environment variable here)[https://docs.travis-ci.com/user/environment-variables#Defining-Variables-in-Repository-Settings].
+Instructions about generating the token [are here](https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token), and [how to setup the environment variable is here](https://docs.travis-ci.com/user/environment-variables#Defining-Variables-in-Repository-Settings).
 
 ## Scaffolded project structure
 
