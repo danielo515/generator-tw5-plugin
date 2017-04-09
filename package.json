@@ -1,6 +1,6 @@
 {
   "name": "generator-tw5-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Create new plugins for tiddlywiki 5 easily",
   "homepage": "https://github.com/danielo515/generator-tw5-plugin",
   "author": {
