@@ -1,4 +1,6 @@
 # generator-tw5-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/danielo515/generator-tw5-plugin.svg)](https://greenkeeper.io/)
 > Create new plugins for tiddlywiki 5 easily
 
 The hardest part for me when I started programming plugins for tiddlywiki was generating an appropriate project.
